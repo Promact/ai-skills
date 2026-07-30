@@ -1,0 +1,11 @@
+{
+  "name": "promact-ai-skills",
+  "displayName": "Promact AI Skills",
+  "version": "0.1.0",
+  "description": "Promact's shared best-practices and coding-guidelines skills for .NET, Python, Node.js, React, React Native, and Angular",
+  "author": {
+    "name": "Promact",
+    "email": "devtools@promactinfo.com"
+  },
+  "skills": "./skills/"
+}

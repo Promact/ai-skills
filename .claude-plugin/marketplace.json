@@ -1,0 +1,16 @@
+{
+  "name": "promact-ai-skills",
+  "description": "Promact organization marketplace for shared Claude Code skills",
+  "owner": {
+    "name": "Promact",
+    "email": "devtools@promactinfo.com"
+  },
+  "plugins": [
+    {
+      "name": "promact-ai-skills",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Best practices and coding guidelines across .NET, Python, Node.js, React, React Native, and Angular"
+    }
+  ]
+}
