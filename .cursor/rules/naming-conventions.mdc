@@ -1,0 +1,7 @@
+---
+description: Promact naming conventions for variables, functions, classes, and files
+globs:
+alwaysApply: false
+---
+
+@../../skills/coding-guidelines/topics/naming-conventions.md

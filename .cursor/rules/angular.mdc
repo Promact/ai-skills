@@ -1,0 +1,15 @@
+---
+description: Promact best practices and coding guidelines for Angular projects
+globs: **/angular.json,**/*.component.ts,**/*.module.ts
+alwaysApply: false
+---
+
+Apply Promact's Angular conventions below when writing or reviewing code in
+this project.
+
+@../../skills/best-practices/stacks/angular.md
+@../../skills/coding-guidelines/stacks/angular.md
+
+For cross-cutting concerns (REST API design, exception handling, security,
+database access, naming, code organization, testing structure), see the
+other rules in this directory — they apply regardless of stack.

@@ -1,0 +1,7 @@
+---
+description: Promact guidance for designing or reviewing REST API endpoints — resource paths, status codes, versioning, pagination
+globs:
+alwaysApply: false
+---
+
+@../../skills/best-practices/topics/rest-api-design.md

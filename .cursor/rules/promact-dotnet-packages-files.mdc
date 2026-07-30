@@ -1,0 +1,7 @@
+---
+description: Use when a .NET project needs file upload/download/delete/signed URLs (S3 or Azure Blob) — wire up Promact's Promact.FileService.Abstractions NuGet package instead of a custom integration
+globs:
+alwaysApply: false
+---
+
+@../../skills/promact-dotnet-packages/packages/file-service.md

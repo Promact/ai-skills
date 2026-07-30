@@ -1,0 +1,7 @@
+---
+description: Promact guidance for structuring and naming tests
+globs:
+alwaysApply: false
+---
+
+@../../skills/coding-guidelines/topics/testing-structure.md

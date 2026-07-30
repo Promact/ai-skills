@@ -1,0 +1,7 @@
+---
+description: Use when a .NET project needs feature flags / gradual rollout / subscription-gated features — wire up Promact's Promact.FeatureFlagService NuGet package instead of a custom integration
+globs:
+alwaysApply: false
+---
+
+@../../skills/promact-dotnet-packages/packages/feature-flag-management.md

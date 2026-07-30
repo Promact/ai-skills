@@ -1,0 +1,15 @@
+---
+description: Promact best practices and coding guidelines for Python projects
+globs: **/*.py,requirements.txt,pyproject.toml,setup.py
+alwaysApply: false
+---
+
+Apply Promact's Python conventions below when writing or reviewing code in
+this project.
+
+@../../skills/best-practices/stacks/python.md
+@../../skills/coding-guidelines/stacks/python.md
+
+For cross-cutting concerns (REST API design, exception handling, security,
+database access, naming, code organization, testing structure), see the
+other rules in this directory — they apply regardless of stack.

@@ -1,0 +1,7 @@
+---
+description: Use when a .NET project needs to send email (transactional, templated, with attachments) — wire up Promact's Promact.EmailService NuGet package instead of a custom integration
+globs:
+alwaysApply: false
+---
+
+@../../skills/promact-dotnet-packages/packages/email-service.md

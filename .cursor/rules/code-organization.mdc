@@ -1,0 +1,7 @@
+---
+description: Promact guidance on organizing code — file/folder structure, feature vs layer grouping, shared utilities
+globs:
+alwaysApply: false
+---
+
+@../../skills/coding-guidelines/topics/code-organization.md

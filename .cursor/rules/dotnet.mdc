@@ -1,0 +1,19 @@
+---
+description: Promact best practices and coding guidelines for .NET/C# projects
+globs: **/*.cs,**/*.csproj,**/*.sln
+alwaysApply: false
+---
+
+Apply Promact's .NET conventions below when writing or reviewing code in
+this project.
+
+@../../skills/best-practices/stacks/dotnet.md
+@../../skills/coding-guidelines/stacks/dotnet.md
+
+For cross-cutting concerns (REST API design, exception handling, security,
+database access, naming, code organization, testing structure), see the
+other rules in this directory — they apply regardless of stack.
+
+If this task is to wire up email sending, feature flags, or file storage,
+see `promact-dotnet-packages-*.mdc` in this directory — use Promact's own
+reusable NuGet packages instead of a custom integration.

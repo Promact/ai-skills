@@ -1,0 +1,17 @@
+---
+description: Use for React web projects (package.json has a react dependency, no react-native) — Promact best practices and coding guidelines for React
+globs:
+alwaysApply: false
+---
+
+Check the project's `package.json` for a `react` dependency without
+`react-native` before applying — React and React Native share file
+extensions, so this can't be glob-matched reliably. Apply Promact's React
+conventions below when writing or reviewing code.
+
+@../../skills/best-practices/stacks/react.md
+@../../skills/coding-guidelines/stacks/react.md
+
+For cross-cutting concerns (REST API design, exception handling, security,
+database access, naming, code organization, testing structure), see the
+other rules in this directory — they apply regardless of stack.

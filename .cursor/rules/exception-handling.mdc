@@ -1,0 +1,7 @@
+---
+description: Promact guidance for exception/error handling — try/catch scope, logging, resource cleanup, user-facing error messages
+globs:
+alwaysApply: false
+---
+
+@../../skills/best-practices/topics/exception-handling.md

@@ -1,0 +1,18 @@
+---
+description: Use for plain Node.js backend projects (package.json present, no react/react-native/@angular/core dependency) — Promact best practices and coding guidelines for Node.js
+globs:
+alwaysApply: false
+---
+
+Node.js has no reliable glob signature of its own (a `package.json` alone
+doesn't distinguish it from React/Angular/React Native) — check the
+project's `package.json` dependencies first. If it has no `react`,
+`react-native`, or `@angular/core` dependency, apply Promact's Node.js
+conventions below when writing or reviewing code.
+
+@../../skills/best-practices/stacks/nodejs.md
+@../../skills/coding-guidelines/stacks/nodejs.md
+
+For cross-cutting concerns (REST API design, exception handling, security,
+database access, naming, code organization, testing structure), see the
+other rules in this directory — they apply regardless of stack.

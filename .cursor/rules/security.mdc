@@ -1,0 +1,7 @@
+---
+description: Promact security guidance — secrets management, input validation, SQL/XSS injection prevention, least privilege
+globs:
+alwaysApply: false
+---
+
+@../../skills/best-practices/topics/security.md

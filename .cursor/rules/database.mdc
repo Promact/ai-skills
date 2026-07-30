@@ -1,0 +1,7 @@
+---
+description: Promact guidance for database access — transactions, indexing, migrations, schema-change safety
+globs:
+alwaysApply: false
+---
+
+@../../skills/best-practices/topics/database.md
