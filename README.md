@@ -13,9 +13,14 @@ Node.js, React, React Native, or Angular.
 - **coding-guidelines** — naming, formatting, file/folder organization, and
   test structure. See
   [`skills/coding-guidelines/SKILL.md`](skills/coding-guidelines/SKILL.md).
+- **promact-dotnet-packages** — wires up Promact's internal reusable NuGet
+  packages ([Promact/reusable-components](https://github.com/Promact/reusable-components))
+  for email sending, feature flags, and file storage in .NET projects
+  instead of a custom integration. See
+  [`skills/promact-dotnet-packages/SKILL.md`](skills/promact-dotnet-packages/SKILL.md).
 
-Each skill auto-detects the current project's stack and pulls in the
-matching guidance from its `stacks/` and `topics/` subfolders.
+The first two skills auto-detect the current project's stack and pull in
+the matching guidance from their `stacks/` and `topics/` subfolders.
 
 ## Install (org-wide)
 

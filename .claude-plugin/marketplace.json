@@ -9,8 +9,8 @@
     {
       "name": "promact-ai-skills",
       "source": "./",
-      "version": "0.1.0",
-      "description": "Best practices and coding guidelines across .NET, Python, Node.js, React, React Native, and Angular"
+      "version": "0.2.0",
+      "description": "Best practices, coding guidelines, and internal-package-wiring skills across .NET, Python, Node.js, React, React Native, and Angular"
     }
   ]
 }
