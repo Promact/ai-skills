@@ -1,0 +1,30 @@
+{
+  "name": "@promact/ai-skills",
+  "version": "0.2.0",
+  "description": "Promact's shared AI coding-agent guidance: best practices, coding guidelines, and internal-package wiring for .NET, Python, Node.js, React, React Native, and Angular. Content for Claude Code, Cursor, and AGENTS.md-native tools.",
+  "license": "UNLICENSED",
+  "private": false,
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/promact/ai-skills.git"
+  },
+  "keywords": [
+    "promact",
+    "ai-agent",
+    "claude-code",
+    "cursor",
+    "agents-md",
+    "coding-guidelines",
+    "best-practices"
+  ],
+  "files": [
+    "AGENTS.md",
+    "README.md",
+    "skills",
+    ".cursor",
+    ".claude-plugin"
+  ]
+}
