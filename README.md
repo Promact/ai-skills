@@ -39,7 +39,7 @@ otherwise) is not yet solved here.
 The first two skills auto-detect the current project's stack and pull in
 the matching guidance from their `stacks/` and `topics/` subfolders.
 
-## Install (org-wide)
+## Install — manually, or per project
 
 From any Claude Code session:
 
@@ -48,8 +48,8 @@ From any Claude Code session:
 /plugin install promact-ai-skills@promact-ai-skills
 ```
 
-To make this automatic for every developer on a given project, add to that
-project's `.claude/settings.json`:
+To make this automatic for every developer working in a given project (but
+not elsewhere), add to that project's `.claude/settings.json`:
 
 ```json
 {
@@ -63,6 +63,48 @@ project's `.claude/settings.json`:
   }
 }
 ```
+
+## Install — org-wide (every developer, every project)
+
+Project-level settings above only apply inside repos that commit that
+file. For every developer to get this automatically regardless of which
+project they're in, an org Owner/Primary Owner configures it once via
+**managed settings**, which take precedence over user and project settings
+and can't be overridden locally.
+
+**If Promact is on Claude for Teams/Enterprise** (the case today): go to
+`claude.ai/admin-settings/claude-code` and paste:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "promact-ai-skills": {
+      "source": { "source": "github", "repo": "Promact/ai-skills" },
+      "autoUpdate": true
+    }
+  },
+  "enabledPlugins": {
+    "promact-ai-skills@promact-ai-skills": true
+  }
+}
+```
+
+Every developer's Claude Code fetches this at next login (and polls
+hourly after) — no manual `/plugin install` needed. `autoUpdate: true`
+means bumping `version` in `.claude-plugin/plugin.json` and pushing is
+enough to roll updates out org-wide.
+
+Note: the admin console validates the settings on save — if it rejects
+`enabledPlugins` as an object map, try the array form
+(`["promact-ai-skills@promact-ai-skills"]`) instead; both shapes have
+turned up in different docs.
+
+**Without a Teams/Enterprise admin console**, the same effect can be
+achieved via IT/MDM pushing a `managed-settings.json` file (same JSON
+shape as above) to a fixed OS path on every machine:
+- macOS: `/Library/Application Support/ClaudeCode/managed-settings.json`
+- Linux: `/etc/claude-code/managed-settings.json`
+- Windows: `C:\Program Files\ClaudeCode\managed-settings.json`
 
 ## Contributing
 
