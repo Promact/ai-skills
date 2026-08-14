@@ -62,15 +62,43 @@ assumptions the developer's own session made while writing the code.
 already answer "why do we do X" on demand when relevant — a dedicated
 agent for that would be redundant.
 
-## 4. MCP servers — not recommended at this stage
+## 4. MCP servers — revisited: org-level troubleshooting skill
 
-MCP servers give Claude tools to reach **external systems** (Jira, a
-database, an internal wiki). This repo is static Markdown guidance with
-no live external dependency, so MCP doesn't add anything today. It would
-only become relevant if we later wanted, e.g., guideline violations
-auto-filed to Jira/Linear, or skill content synced to Confluence — neither
-is needed for the initial rollout. Recommend revisiting only if such an
-integration becomes a concrete ask.
+Update: a concrete ask has emerged. An org-level skill to troubleshoot
+**security, performance, and infrastructure** issues needs live access to
+real systems (logs, metrics, scan results) — static guidance alone can't
+do this, so MCP is now warranted (superseding the "not recommended"
+verdict originally in this section).
+
+**Current stack (per Roshni):** AWS/Azure native monitoring (CloudWatch,
+Azure Monitor) + Sentry.
+
+**Known MCP coverage today:**
+
+| Area | Tool | MCP server available? |
+|---|---|---|
+| Errors / perf | Sentry | Yes — official Sentry MCP server (already connected in this session) |
+| Infra / logs (AWS) | CloudWatch | Yes — AWS Labs publish official MCP servers, incl. one for CloudWatch |
+| Infra / logs (Azure) | Azure Monitor | Yes — Microsoft's Azure MCP server covers Monitor + most Azure services |
+| Security | — | No sanctioned tool identified yet — needs a decision before an MCP server can be picked or built |
+
+**Approach:**
+
+- Reuse the official Sentry, AWS, and Azure MCP servers — no custom build
+  needed for those three.
+- Decide on a sanctioned security scanning/reporting tool first; only
+  then evaluate whether an existing MCP server covers it or one must be
+  built in-house.
+- Scope access per server to read-only (logs/metrics/scan results) — no
+  write access into cloud accounts or Sentry from this skill.
+- Pair each MCP server with a troubleshooting skill (runbook per area:
+  security / speed / infra) that tells Claude how to use the data, not
+  just that it can fetch it.
+- Pilot with Sentry + one cloud provider first (narrowest access,
+  clearest existing MCP support) before adding security tooling.
+- Requires sign-off from whoever owns infra/security access before any
+  server is wired into a real environment, since this expands what
+  Claude can read org-wide.
 
 ## 5. Rollout principle
 
